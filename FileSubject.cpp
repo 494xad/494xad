@@ -16,10 +16,10 @@ void FileSubject::Detach(IObserver* observer)
     }
 }
 
-void FileSubject::Notify(const QDateTime& lastModified, bool isExist, qint64 size) const
+void FileSubject::Notify(bool isChanged, bool isExist, qint64 size) const
 {
     for (auto& observer : observers)
     {
-        observer->Update(lastModified, isExist, size);
+        observer->Update(isChanged, isExist, size);
     }
 }

@@ -7,7 +7,7 @@
 class IObserver
 {
 public:
-    virtual void Update(const QDateTime& lastModified, bool isExist, qint64 size) = 0;
+    virtual void Update(bool isChanged, bool isExist, qint64 size) = 0;
     virtual ~IObserver(){};
 };
 

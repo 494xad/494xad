@@ -19,6 +19,9 @@ public:
 private:
     // Путь к файлу
     QFileInfo file_;
+    // Дата последнего изменения
+    QDateTime lastModified_;
+    bool exists_;
 };
 
 #endif // FILESTATE_H

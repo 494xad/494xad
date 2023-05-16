@@ -18,7 +18,7 @@ public:
     // lastModified - дата последнего изменения фвйла
     // isExist - индикатор существования файла
     // size - размер файла в байтах
-    void Notify(const QDateTime& lastModified, bool isExist, qint64 size) const;
+    void Notify(bool isChanged, bool isExist, qint64 size) const;
 private:
     // Список наблюдателей отслеживающих состояние файла
     QList<IObserver*> observers;
